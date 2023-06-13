@@ -24,10 +24,10 @@ python3 -u evaluate.py $base_args --nviews 1 >> $log 2>&1
 #python3 -u evaluate.py $base_args --nviews -1 --viz_cov --do_viz_extra --show_viz >> $log 2>&1
 
 # SLAM
-python3 -u evaluate.py $base_args --nviews -1 --do_viz_extra >> $log 2>&1
-python3 -u evaluate.py $base_args --nviews -1 --do_viz_extra --no_prior_det >> $log 2>&1
-python3 -u evaluate.py $base_args --nviews -1 --no_network_cov >> $log 2>&1
-python3 -u evaluate.py  $base_args --nviews -1 --gt_cam_pose >> $log 2>&1
+# python3 -u evaluate.py $base_args --nviews -1 --do_viz_extra >> $log 2>&1
+# python3 -u evaluate.py $base_args --nviews -1 --do_viz_extra --no_prior_det >> $log 2>&1
+# python3 -u evaluate.py $base_args --nviews -1 --no_network_cov >> $log 2>&1
+# python3 -u evaluate.py  $base_args --nviews -1 --gt_cam_pose >> $log 2>&1
 
 # Debug with GT keypoints
 #python3 -u evaluate.py $base_args --nviews 1 --debug_gt_kp >> $log 2>&1

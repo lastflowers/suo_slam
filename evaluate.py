@@ -277,7 +277,12 @@ class Evaluator:
                             def arr2str(x):
                                 return " ".join(str(elt) for elt in x.reshape(-1).tolist()) 
                             line = f"{scene_id},{view_id},{obj_id},{result['score']},"
-                            line += f"{arr2str(R)},{arr2str(t)},-1"
+                            line += f"{arr2str(R)},{arr2str(t)},-1,"
+
+                            R_cg, t_cg = result["T_GtoC"][:3,:3], result["T_GtoC"][:3,3]
+                            R_go, t_go = result["T_OtoG"][:3,:3], result["T_OtoG"][:3,3]
+                            line += f"{arr2str(R_cg)},{arr2str(t_cg)},{arr2str(R_go)},{arr2str(t_go)}"
+
                             if self.dataset.is_target(scene_id, view_id, obj_id):
                                 csv_lines.append(line + "\n")
                         else:

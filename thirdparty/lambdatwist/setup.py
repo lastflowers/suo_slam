@@ -28,6 +28,7 @@ class CopyLibFile(install):
 
 setup(
     name='lambdatwist',
+    py_modules=[],
     version=__version__,
     description='Lambdatwist PnP RANSAC.',
     url='https://github.com/midjji/pnp',

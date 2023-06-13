@@ -222,6 +222,8 @@ class ObjectSLAM:
                     "T_OtoC": T_OtoC,
                     #"score": 0, 
                     "score": 1 + self.obj_num_inliers(obj_id), # TOTAL number of final inliers
+                    "T_GtoC" : T_GtoC,
+                    "T_OtoG" : T_OtoG,
                 }
                 if obj_id in detection.keys():
                     det_obj = detection[obj_id]
